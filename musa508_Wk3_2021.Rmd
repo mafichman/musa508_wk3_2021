@@ -69,18 +69,18 @@ You can clone the repo using the "file" tab in Github Desktop and using [this UR
 Notice that this code is a bit different from that in the text. The filepath in the github data is a bit different. Yours will look different too depending on where the data were cloned to (probably your GitHub folder).
 
 ```{r load_data, message = FALSE}
-lancCounty <- st_read("~/GitHub/Public-Policy-Analytics-Landing/DATA/Chapter2/LancasterCountyBoundary/LancasterCountyBoundary.shp") %>%
+lancCounty <- st_read("https://raw.githubusercontent.com/urbanSpatial/Public-Policy-Analytics-Landing/master/DATA/Chapter2/LancasterCountyBoundary.geojson") %>%
   st_transform('ESRI:102728')
 
-uga <- st_read("~/GitHub/Public-Policy-Analytics-Landing/DATA/Chapter2/UGB/Urban_Growth_Boundary.shp") %>% 
+uga <- st_read("https://raw.githubusercontent.com/urbanSpatial/Public-Policy-Analytics-Landing/master/DATA/Chapter2/Urban_Growth_Boundary.geojson") %>% 
   st_transform('ESRI:102728')     
 
-studyAreaTowns <- st_read("~/GitHub/Public-Policy-Analytics-Landing/DATA/Chapter2/StudyAreaTowns/StudyAreaTowns.shp") %>%
+studyAreaTowns <- st_read("https://raw.githubusercontent.com/urbanSpatial/Public-Policy-Analytics-Landing/master/DATA/Chapter2/StudyAreaTowns.geojson") %>%
   st_transform('ESRI:102728')    
 
-buildings <- st_read("~/GitHub/Public-Policy-Analytics-Landing/DATA/Chapter2/LancasterCountyBuildings/LancasterCountyBuildings.shp") %>% st_transform('ESRI:102728')    
+buildings <- st_read("https://raw.githubusercontent.com/urbanSpatial/Public-Policy-Analytics-Landing/master/DATA/Chapter2/LancasterCountyBuildings.geojson") %>% st_transform('ESRI:102728')    
 
-greenSpace <- st_read("~/GitHub/Public-Policy-Analytics-Landing/DATA/Chapter2/LancasterCountyGreenSpace/LancasterGreenSpace.shp") %>% st_transform('ESRI:102728') 
+greenSpace <- st_read("https://raw.githubusercontent.com/urbanSpatial/Public-Policy-Analytics-Landing/master/DATA/Chapter2/LancasterGreenSpace.geojson") %>% st_transform('ESRI:102728')
 ```
 
 ## Exploring our spatial data
@@ -100,7 +100,7 @@ ggplot()+
 
 # Geoprocessing
 
-We are going to do some meat-and-potatoes vetor GIS - union and buffer.
+We are going to do some meat-and-potatoes vector GIS - union and buffer.
 
 ## Union
 
